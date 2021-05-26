@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --first-colour:white;
+            --sec-colour:rgb(63, 63, 63);
+            --ter-colour:rgba(14, 14, 14);
+        }
+        body,h1{margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+        
+        .container{
+            width:80%;
+            margin:auto;
+            text-align:center;
+            padding:15px;
+            overflow: hidden;
+
+            display:flex ;
+            flex-direction:column;
+            align-items:center;  
+        }
+
+        .line:nth-of-type(odd){background-color:var(--sec-colour);
+        color:var(--first-colour);
+        }
+        .line:nth-of-type(even){background-color: var(--first-colour);
+        }
+
+        p,h1,h2,h3{
+            padding:10px;
+            margin: 0;
+            box-sizing: content-box;
+            }
+
+        a{text-decoration: none;
+        color:inherit;
+        padding: 10px;
+        border:1px solid var(--ter-colour);
+        background-color:var(--ter-colour);
+        transition:0.4s;}
+
+        a:hover{background-color:var(--first-colour);
+        color:var(--ter-colour);
+        }
+
+        .grid1{display:grid;
+        grid-template-columns: 1fr 1fr;
+        }
+
+        .grid2{display:grid;
+        grid-template-columns: repeat(3,minmax(0,1fr));
+        overflow:hidden;
+        grid-gap:10px
+       
+        }
+
+        .grid2>div{
+        background-color:var(--first-colour);
+           color:var(--sec-colour);
+           }
+        img{object-fit: cover;
+        width:100%;
+        margin:0;
+        padding:0; 
+        }
+        .grid2>div>h3{
+            color:var(--ter-colour);
+        }
+
+        .grid3{display:grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap:10px;
+        }
+        .about{
+            display:flex;
+            flex-direction: column;
+            padding:5px;
+            align-items:center; 
+        }
+        .contact{background-color: rgb(0, 140, 255);}
+        .footer{
+            color:var(--sec-colour);
+            background-color: var(--first-colour);
+            text-align: center;
+        }
+        @media (max-width:700px){
+            .container, line{width:90%;}
+            body{font-size: x-large;}
+            line{overflow: hidden;}
+            .grid1, .grid2 ,.grid3{grid-template-columns: 1fr;
+            margin:auto}
+            .grid2{grid-gap:25px;}
+        }
+
+        
+
+
+
+
+    </style>
+</head>
+<body>
+    <section class=" line">
+        <div class="container">
+            <h1>Welcome to Royboy Web Solutions</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero culpa officiis nesciunt quae et labore tenetur ducimus, corporis magnam optio esse saepe fugiat quis laboriosam at temporibus enim voluptas totam!</p>
+            <a href="#" class="btn"><span> Read More</span></a>
+        </div>
+    </section>
+    
+    <section class=" line">
+        <div class="container">
+            <h2>Web & Application Development</h2>
+            <div class="grid1">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, dielit. Nobis, dolorem hic, quia quo cumque voluptatem ab sequi perspiciatis earum nisi asperiores itaque? Accusamus culpa amet nostrum voluptates minus alias nihil!
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, dielit. Nobis, dolorem hic, quia quo cumque voluptatem ab sequi perspiciatis earum nisi asperiores itaque? Accusamus culpa amet nostrum voluptates minus alias nihil!
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="line">
+        <div class="container grid2">
+            <div>
+                <div>
+                    <img src="images/forest-light-nature-forest-wallpaper-preview.jpg" alt="">
+                </div>
+                <div>
+                    <h3>Web Development</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur illum nemo incidunt provident eligendi.</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="images/forest-light-nature-forest-wallpaper-preview.jpg" alt="">
+                </div>
+                <div>
+                    <h3>Mobile Application</h3>
+                    <p>  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur illum nemo incidunt provident eligendi.</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="images/forest-light-nature-forest-wallpaper-preview.jpg" alt="">
+                </div>
+                <div>
+                    <h3>Tech Marketing</h3>
+                    <p>  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur illum nemo incidunt provident eligendi.</p>
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <section class=" line">
+        <div class="container">
+            <h2>We handle all our digital needs</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem soluta natus ad doloribus expedita deleniti distinctio totam? Aspernatur voluptas omnis quae in, alias dicta blanditiis, iusto ipsum, expedita quibusdam atque.</p>
+        </div>
+    </section>
+
+    <section">
+        <div class="line grid3">
+            <div class="about contact">
+                <h2>Contact Us</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, quos.</p>
+                <p>Contact: abcdefg</p>
+            </div>
+            <div class="about">
+                <h2>About Our Company</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis,expedita, saepe neque libero vitae, quia repellendus aperiam! Non.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>royboy &copy; 2021</p>
+    </footer>
+</body>
+</html>
